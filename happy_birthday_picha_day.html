@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday 🤍</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(to top, #0f2027, #203a43, #2c5364);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+      color: white;
+      text-align: center;
+    }
+
+    .message {
+      animation: fadeInUp 2s ease forwards;
+      opacity: 0;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #ffffff;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 10px 0;
+      color: #eee;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .hearts {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .heart {
+      width: 20px;
+      height: 20px;
+      background: pink;
+      position: absolute;
+      animation: float 6s linear infinite;
+      transform: rotate(45deg);
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background: pink;
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="message">
+    <h1>Happy birthday — พิชา Day 🤍</h1>
+    <p>น่ะคับคนเก่งของพี่</p>
+    <p>ขอให้มีความสุขมาก ๆ ประสบความสำเร็จในชีวิต</p>
+    <p>มีแต่คนรัก คนตามใจ คิดอะไรก็ขอให้สมปรารถนานะ</p>
+  </div>
+
+  <div class="hearts">
+    <div class="heart" style="left: 0%; top: 100%;"></div><div class="heart" style="left: 10%; top: 90%;"></div><div class="heart" style="left: 20%; top: 80%;"></div><div class="heart" style="left: 30%; top: 70%;"></div><div class="heart" style="left: 40%; top: 60%;"></div><div class="heart" style="left: 50%; top: 50%;"></div><div class="heart" style="left: 60%; top: 40%;"></div><div class="heart" style="left: 70%; top: 30%;"></div><div class="heart" style="left: 80%; top: 20%;"></div><div class="heart" style="left: 90%; top: 10%;"></div>
+  </div>
+</body>
+</html>
